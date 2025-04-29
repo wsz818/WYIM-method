@@ -62,9 +62,9 @@ This file probides code for example Diagnosis Alzheimer With Handwriting Dataset
 
 
 ## acath_male60.csv
-This data is male group over the age of 60 from original data publicly available at {\it https://hbiostat.org/data/}. The data contains three covariates: age (Age), cad.dur (Duration of Symptoms of Coronary Artery Disease) and choleste (Cholesterol) and a binary response sigdz.
+This data is male group over the age of 60 from original data publicly available at { https://hbiostat.org/data/}. The data contains three covariates: age (Age), cad.dur (Duration of Symptoms of Coronary Artery Disease) and choleste (Cholesterol) and a binary response sigdz.
 The missing data has been dealt with random forest imputation and all continuous variables has been normalized and the duration variable is log transformed. We set sigdz=1 notes for significant coronary disease.
 
 ## DARWIN_30.csv
-This data includes top 30 handwriting covariates selected with individual Youden index and a response y. The original data is pulicly available at {\it https://archive.ics.uci.edu/dataset/732/darwin} with description of covariates. All continuous variables in this data has been normalized and we set y=1 notes for Alzheimer's disease patients.
+This data includes top 30 handwriting covariates selected with individual Youden index and a response y. The original data is pulicly available at {https://archive.ics.uci.edu/dataset/732/darwin} with description of covariates. All continuous variables in this data has been normalized and we set y=1 notes for Alzheimer's disease patients.
 
