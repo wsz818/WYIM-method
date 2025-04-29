@@ -1,8 +1,4 @@
-# WYIM method: Optimal Linear Combination of Biomarkers by Weighted Youden Index Maximization
-
-We introduce a novel method for medical diagnosis modeling. Weighted Youden index serves as an important and flexible evaluation metric of diagnostic tests and we proposed a method to construct an optimal diagnosis score and determine the best cut-off point at the same time based on weighted Youden index maximization. To deal with the neither continuous nor smooth objective function, we adopt an iterative marginal optimization algorithm. It updates each component of the parameter vector marginally at each iteration step and guarantees that the objective function at each iteration step is monotonically increasing and hence is computationally stable yet reasonably fast. For high dimensional data, we also provide a forward selection algoritm for WYIM.
-
-#WYIM method in Optimal Linear Combination of Biomarkers by Weighted Youden Index Maximization
+# WYIM method in Optimal Linear Combination of Biomarkers by Weighted Youden Index Maximization
 
 We introduce a novel method for medical diagnosis modeling. Weighted Youden index serves as an important and flexible evaluation metric of diagnostic tests and we proposed a method to construct an optimal diagnosis score and determine the best cut-off point at the same time based on weighted Youden index maximization. To deal with the neither continuous nor smooth objective function, we adopt an iterative marginal optimization algorithm. It updates each component of the parameter vector marginally at each iteration step and guarantees that the objective function at each iteration step is monotonically increasing and hence is computationally stable yet reasonably fast. For high dimensional data, we also provide a forward selection algoritm for WYIM. 
 
