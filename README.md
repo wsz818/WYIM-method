@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 
 # WYIM method in Optimal Linear Combination of Biomarkers by Weighted Youden Index Maximization
 
-=======
-# WYIM method in Optimal Linear Combination of Biomarkers by Weighted Youden Index Maximization
-
->>>>>>> bed52d41db448998161aaf56022e0f2dae216872
 We introduce a novel method for medical diagnosis modeling. Weighted Youden index serves as an important and flexible evaluation metric of diagnostic tests and we proposed a method to construct an optimal diagnosis score and determine the best cut-off point at the same time based on weighted Youden index maximization. To deal with the neither continuous nor smooth objective function, we adopt an iterative marginal optimization algorithm. It updates each component of the parameter vector marginally at each iteration step and guarantees that the objective function at each iteration step is monotonically increasing and hence is computationally stable yet reasonably fast. For high dimensional data, we also provide a forward selection algoritm for WYIM. 
 
 Code for proposed WYIM method and WYIM forward selection is in file "WYIM_code.R". We present the usage of proposed method and compare their performances with other methods by two real examples: Duke Cardiac Catheterization Diagnostic Dataset (file "example_acath.R") and Diagnosis Alzheimer With Handwriting Dataset (file "example_DARWIN.R") with according data.
@@ -16,11 +11,7 @@ This file containing three functions:
 #### Inputs
 - `y`: A vector (length n) of the binary response.
 - `score`: A vector (length n) of the diagnosis scores.
-<<<<<<< HEAD
 - `w`: Value of weight, and value range of w is greater than 0 and less than 1 (neither 0 nor 1 is allowed).
-=======
-- `w`: Value of weight, and value range of w is greater than 0 and less than 1 (neither 0 nor 1 is allowed).
->>>>>>> bed52d41db448998161aaf56022e0f2dae216872
 
 #### Outputs
 - `WYI`: Estimation of weighted Youden index (WYI).
@@ -30,11 +21,7 @@ This file containing three functions:
 #### Inputs
 - `x`: A matrix (n x p) of non-zero covariates.
 - `y`: A vector (length n) of the binary response.
-<<<<<<< HEAD
 - `w`: Value of weight, and value range of w is greater than 0 and less than 1 (neither 0 nor 1 is allowed).
-=======
-- `w`: Value of weight, and value range of w is greater than 0 and less than 1 (neither 0 nor 1 is allowed).
->>>>>>> bed52d41db448998161aaf56022e0f2dae216872
 - `beta_start`: A vector (length p) of initial value for beta. The beta_start can be set as maximum likelihood estimator of logistic regression $\hat{\beta}\_{logistic} / \|\hat{\beta}\_{logistic}\|$, or just assign equal coefficients to each covariate $(1/\sqrt(p),\dots,1/\sqrt(p))$.
 - `maxiter`: Number of maximum rounds of update iteration. If number of iterations exceeds maxiter, stop the iteration.
 - `tol`: Value of threshold to stop the update iteration. If the dot product of the updated and previous normalized beta vectors differs from 1 by less than 'tol', stop the loop.​
@@ -49,11 +36,7 @@ This file containing three functions:
 #### Inputs
 - `x`: A matrix (n x p) of non-zero covariates.
 - `y`: A vector (length n) of the binary response.
-<<<<<<< HEAD
 - `w`: Value of weight, and value range of w is greater than 0 and less than 1 (neither 0 nor 1 is allowed).
-=======
-- `w`: Value of weight, and value range of w is greater than 0 and less than 1 (neither 0 nor 1 is allowed).
->>>>>>> bed52d41db448998161aaf56022e0f2dae216872
 - `maxiter`: Number of maximum rounds of update iteration. If number of iterations exceeds maxiter, stop the iteration.
 - `tol`: Value of threshold to stop the update iteration. If the dot product of the updated and previous normalized beta vectors differs from 1 by less than 'tol', stop the loop.​
 
