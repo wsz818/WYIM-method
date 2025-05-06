@@ -2,13 +2,10 @@
 
 #Here we apply three forward methods: logistic, nonparametric minmax and WYIM to DARWIN_30 data, the data has been preprocessed
 #For each method we record: linear combination coefficient vector, cutoff point and according WYI in final model
-#The plots show conditional density curves of linear combination x%*%bhat given y=0 and y=1
 #Here we set w=0.5. The w can be set between 0 and 1 
 
 source("WYIM_code.R")
 library(SLModels) #for nonparametric minmax method
-library(ggplot2) #for density curve
-library(patchwork)
 
 data=read.csv("DARWIN_30.csv")
 
@@ -148,39 +145,4 @@ result_wyim
 result_logistic
 result_mm
 
-##conditional density curves for different methods----------------------------------
-density_logistic=
-  ggplot(curve_logistic_Az, aes(x =score_logistic, color = y)) +
-  geom_density(size=0.7,bw=0.7) +  
-  geom_vline(xintercept =result_logistic$cutoff_logistic,linetype = "dashed",size = 0.7,color='navy') +
-  ylab("")+xlab("")+
-  scale_color_manual(values = c("0" = "#F8766D", "1" = "#00BFC2"))+ # 0 red
-  scale_x_continuous(limits = c(-5,5))+scale_y_continuous(limits = c(0,0.56))+
-  theme_minimal()+
-  theme(axis.text = element_text(color="black",size = 15),title = element_text(color="black",size = 15),legend.position = "none")+
-  annotate("text", x = 2.5, y = 0.5, label = "logistic",size=6)
 
-density_mm=
-  ggplot(curve_mm_Az, aes(x =score_mm, color = y)) +
-  geom_density(size=0.7,bw=0.7) +  
-  geom_vline(xintercept =result_mm$cutoff_mm,linetype = "dashed",size = 0.7,color='navy') +
-  ylab("")+xlab("")+
-  scale_color_manual(values = c("0" = "#F8766D", "1" = "#00BFC2"))+ # 0 red
-  scale_x_continuous(limits = c(-5,5))+scale_y_continuous(limits = c(0,0.56))+
-  theme_minimal()+
-  theme(axis.text = element_text(color="black",size = 15),title = element_text(color="black",size = 15),legend.position = "none")+
-  annotate("text", x = 2.5, y = 0.5, label = "MM",size=6)
-
-density_wyim=
-  ggplot(curve_wyim_Az, aes(x =score_wyim, color = y)) +
-  geom_density(size=0.7,bw=0.7) +  
-  geom_vline(xintercept =result_wyim$cutoff_wyim,linetype = "dashed",size = 0.7,color='navy') +
-  ylab("")+xlab("")+
-  scale_color_manual(values = c("0" = "#F8766D", "1" = "#00BFC2"))+ # 0 red
-  scale_x_continuous(limits = c(-5,5))+scale_y_continuous(limits = c(0,0.56))+
-  theme_minimal()+
-  theme(axis.text = element_text(color="black",size = 15),title = element_text(color="black",size = 15),legend.position = "none")+
-  annotate("text", x = 2.5, y = 0.5, label = "WYIM",size=6)
-
-density_Az=density_wyim+density_logistic+density_mm+plot_layout(ncol = 3)
-ggsave("density_Az.pdf",width =15,height =4.5,family="Helvetica")
