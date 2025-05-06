@@ -52,10 +52,10 @@ This file containing three functions:
 
 
 ## example_acath.R
-This file provides code for example Duke Cardiac Catheterization Diagnostic Dataset. We apply four methods: logistic regression, single index, nonparametric minmax and WYIM to male group over the age of 60 of dataset. We record computing time, linear combination coefficient vector, cutoff point and according WYI for each method. Code for conditional density curves of of linear combinations given y=0 and y=1 from different methods is also provided.
+This file provides code for example Duke Cardiac Catheterization Diagnostic Dataset. We apply four methods: logistic regression, single index, nonparametric minmax and WYIM to male group over the age of 60 of dataset. We record computing time, linear combination coefficient vector, cutoff point and according WYI for each method. 
 
 ## example_DARWIN.R 
-This file probides code for example Diagnosis Alzheimer With Handwriting Dataset. We apply three forward selection methods: logistic regression, nonparametric minmax and WYIM to check the performances of these methods while confronted with high dimensional data. We record final linear combination coefficient vector, cutoff point and according WYI for each method in final model. Code for conditional density curves of of linear combinations given y=0 and y=1 from different methods is also provided.
+This file probides code for example Diagnosis Alzheimer With Handwriting Dataset. We apply three forward selection methods: logistic regression, nonparametric minmax and WYIM to check the performances of these methods while confronted with high dimensional data. We record final linear combination coefficient vector, cutoff point and according WYI for each method in final model. 
 
 
 ## acath_male60.csv
